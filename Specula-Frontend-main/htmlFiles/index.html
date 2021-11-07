@@ -21,20 +21,48 @@ body {
   font-family: 'Ubuntu', sans-serif; 
 }   
 .dark-mode {
-  background-color: #002b2b;  
-  color: #ffffff;
+  background-color: rgb(34, 0, 0);;
+  color: rgb(255, 255, 255); 
 }
 
-.main1{
-  background-color: #ffffff;
-  width: 400px;
-  height: 300px;
-  margin: 7em auto;
-  border-radius: 1.5em;
-  box-shadow: 0px 0px 1px 15px #c2c2c23f;
-  align-items: center;
+.main{
+  margin-top: 70pt;
+  margin-left: 450px;
+  width:35%;
+  height: 350px;
+  box-shadow: 0px 0px 1px 10px #4600008c;
+color: rgb(38, 50, 56);
+font-weight: 700;
+font-size: 14px;
+background: rgba(136, 126, 126, 0.04);
+border: none;
+border-radius: 20px;
+box-sizing: border-box;
+border: 2px solid rgba(0, 0, 0, 0.02);
+font-family: 'Ubuntu', sans-serif;
+}
+.dark-mode .main{
+  box-shadow: 0px 0px 1px 10px #ee67675b;
+  background: #a800005b;
 }
 
+.sign {
+  padding-top: 40px;
+  color: #8d8d8d;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 23px;
+}
+.dark-mode .sign{
+color: rgba(255, 255, 255, 0.801);
+}
+
+hr{
+  width: 80%;
+  margin-left: 50px;
+  margin: 30pt;
+
+}
 button{
 cursor: pointer;
 border-radius: 40px;
@@ -45,114 +73,28 @@ background-color: rgb(97, 0, 0);
 color: white;
 
 }
+.dark-mode button {
+  background-color: rgb(255, 255, 255);
+  color: rgb(97, 0, 0);
+}
 
 .submit {
   cursor: pointer;
-    border-radius: 5em;
+    border-radius: 15px;
     color: #fff;
     background-color: rgb(119, 0, 0);
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding: 10px 40px 10px 40px;
     font-family: 'Ubuntu', sans-serif;
-    margin-left: 35%;
+    margin-left: 38%;
+    margin-top: 20px;
     font-size: 13px;
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
   }
   .submit:hover {
-    cursor: pointer;
-      border-radius: 5em;
-      color: #fff;
-      background-color: rgb(173, 0, 0);
-      padding-left: 40px;
-      padding-right: 40px;
-      padding-bottom: 10px;
-      padding-top: 10px;
-      font-family: 'Ubuntu', sans-serif;
-      margin-left: 35%;
-      font-size: 13px;
-      box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
-    }
-
-    .sign {
-  padding-top: 40px;
-  color: #8d8d8d;
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: bold;
-  font-size: 23px;
-}
-
-.topnav {
-  overflow: hidden;
-  background-color: rgb(92, 0, 0);
-}
-
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  border-radius: 30px;
-}
-
-.topnav a:hover {
-  background-color: rgb(192, 190, 190);
-  color: black;
-  cursor: pointer;
-
-}
-
-.topnav a.active {
-  background-color: #610000;
-  color: white;
-  cursor: pointer;
-
-}
-
-
-
-.topnav b {
-  float: right;
-  display: block;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+    color: #fff;
+    background-color: rgb(0, 53, 40);
   
-}
-
-.topnav b:hover {
-  text-decoration-line: underline;
-  cursor: pointer;
-}
-
-
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
+    }
 
 
 </style>
@@ -161,27 +103,8 @@ color: white;
     <div class="window">
       <!-- Your app's content goes inside .window-content -->
       <div class="window-content">
-       
-       
-        <div class="topnav" id="myTopnav">
-          <a  class="active">Home</a>
-          <a >Exams</a>
-          <a >Rooms</a>
-          <a >Profile</a>
-          <b >Log out</b>
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-          </a>
-        </div>
-       
-       
-        <button  onclick="myFunction()" style="font-size:24px"> <i class="fa fa-adjust"></i></button>
-        <script>
-        function myFunction() {
-           var element = document.body;
-           element.classList.toggle("dark-mode");
-        }
-        </script>
+      
+        
 
 <script>
 function myFunction() {
@@ -192,11 +115,22 @@ function myFunction() {
     x.className = "topnav";
   }
 }
+
 </script>
+<button  onclick="myFunction()" style="font-size:24px"> <i class="fa fa-adjust"></i></button>
+        <script>
+        function myFunction() {
+           var element = document.body;
+           element.classList.toggle("dark-mode");
+        }
+        </script>
+
+        <div class="main">
 
 
-        <div class="main1">
+          
           <p class="sign" align="center">Sign in as</p>
+          <hr>
             <button class="submit" type="button" onclick="loadStudentLogin()">Student </button>
             <button class="submit" type="button" onclick="loadProfessorLogin()">Professor</button>
         </div>

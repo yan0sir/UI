@@ -18,8 +18,8 @@ body {
 }
 
 .dark-mode {
-  background-color: #001616;
-  color: rgb(240, 240, 240);
+  background-color: rgb(34, 0, 0);;
+  color: rgb(255, 255, 255);
 }
 
 .dark-mode h1 {
@@ -29,6 +29,10 @@ body {
       text-align: center;
       }
 
+      hr{
+  width: 70%;
+  margin-right:150px;
+}
       button{
   cursor: pointer;
 position: fixed;
@@ -39,6 +43,14 @@ background-color: rgb(97, 0, 0);
 color: white;
 
 }
+.dark-mode button {
+color: rgb(97, 0, 0);
+background-color: white;
+}
+.dark-mode .video{
+
+  box-shadow: 0px 0px 1px 10px #ee67675b;
+  background: #8600005b;}
 .video{
 
 margin-left: 230px;
@@ -46,8 +58,7 @@ margin-top: 150px;
 width: 70%;
 padding: 10px;
   height: 400px;
-  border-radius: 1.5em;
-  box-shadow: 0px 0px 1px 15px #c2c2c23f;
+  box-shadow: 0px 0px 1px 10px #4600008c;
   align-items: center;
 color: rgb(38, 50, 56);
 font-weight: 700;
@@ -57,7 +68,7 @@ background: rgba(136, 126, 126, 0.04);
 border: none;
 border-radius: 20px;
 box-sizing: border-box;
-border: 2px solid rgba(0, 0, 0, 0.02);
+border: 1px solid rgba(0, 0, 0, 0.315);
 text-align: center;
 font-family: 'Ubuntu', sans-serif;
 }
@@ -74,6 +85,7 @@ font-family: 'Ubuntu', sans-serif;
 
 <div class="video">
     <h1>Live Exam </h1>
+    <hr>
     <img id="img" src = "{{ url_for('stream_feed') }}">
 </div>
 
